@@ -8,8 +8,5 @@ services:
       - .:/code
     environment:
       FLASK_ENV: development
-    #env_file: .env
   redis:
     image: "redis:alpine"
-   # volumes:
-    #- ./redis.conf:/usr/local/etc/redis/redis.conf
