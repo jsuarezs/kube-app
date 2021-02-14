@@ -35,3 +35,10 @@ spec:
           limits:
             memory: 256Mi
             cpu: 200m
+        volumeMounts:
+        - name: data
+          mountPath: /data  
+      volumes:
+        - name: data
+          persistentVolumeClaim:
+            claimName: redis-pv-claim
