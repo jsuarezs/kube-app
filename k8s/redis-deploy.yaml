@@ -18,3 +18,20 @@ spec:
       containers:
       - name: redis
         image: redis
+        args: ["--requirepass", "$(REDIS_PASSWORD)"]
+        envFrom:
+          - configMapRef:
+              name: vars
+        env:
+          - name: REDIS_PASSWORD
+            valueFrom:
+              secretKeyRef:
+                name: redis
+                key: password 
+        resources:
+          requests:
+            memory: 128Mi
+            cpu: 100m
+          limits:
+            memory: 256Mi
+            cpu: 200m
