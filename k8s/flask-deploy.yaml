@@ -17,6 +17,14 @@ spec:
       containers:
       - name: flask
         image: eu.gcr.io/containers-project-304717/flask-kube
+        livenessProbe:
+          httpGet:
+            path: /health/live
+            port: 5000
+        readinessProbe:
+          httpGet:
+            path: /health/ready
+            port: 5000
         envFrom:
           - configMapRef:
               name: vars
