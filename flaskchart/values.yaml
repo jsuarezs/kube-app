@@ -1,0 +1,22 @@
+replicas: 1
+image:
+  name: eu.gcr.io/containers-project-304717/flask-kube
+  tag: latest
+
+resources:
+  requests:
+    memory: 128Mi
+    cpu: 100m
+  limits:
+    memory: 256Mi
+    cpu: 200m
+
+ingress:
+  enabled: true
+  host: example.domain.com
+
+redis:
+  cluster:
+    enabled: false
+  metrics:
+    enabled: true
