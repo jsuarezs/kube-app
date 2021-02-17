@@ -6,7 +6,7 @@ metadata:
   name: flask
 spec:
   rules:
-  - host: keepcoding-35-230-79-249.nip.io
+  - host: flask.keepcoding.35-203-139-35.nip.io
     http:
       paths:
       - backend:
@@ -15,4 +15,4 @@ spec:
 
 
 
-          
+           
