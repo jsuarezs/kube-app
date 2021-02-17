@@ -2,6 +2,8 @@ version: "3.9"
 services:
   web:
     build: .
+    env_file:
+      - ".env"
     ports:
       - "5000:5000"
     volumes:
@@ -10,3 +12,11 @@ services:
       FLASK_ENV: development
   redis:
     image: "redis:alpine"
+    volumes:
+      - "redis:/data"
+    env_file:
+      - ".env"
+    restart: always
+
+volumes:
+  redis: {}
