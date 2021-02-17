@@ -13,7 +13,7 @@ resources:
 
 ingress:
   enabled: true
-  host: example.domain.com
+  host: helm.keepcoding.35-203-139-35.nip.io
 
 redis:
   cluster:

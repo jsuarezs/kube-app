@@ -3,6 +3,8 @@ kind: Deployment
 metadata:
   labels:
     {{- include "app.metadataLabels" $ | nindent 4 }}
+  annotations:
+    {{- include "app.metadataAnnotations" $ | nindent 4 }}
   name: {{ template "app.name" . }}-flask
 spec:
   replicas: {{ .Values.replicas }}
@@ -13,10 +15,14 @@ spec:
     metadata:
       labels:
         {{- include "app.metadataLabels" $ | nindent 8 }}
+      annotations:
+        prometheus.io/scrape: "true"
+        prometheus.io/path: "/metrics"
+        prometheus.io/port: "8000"
     spec:
       containers:
-      - name: flask
-        image: {{ .Values.image.name }}:{{ .Values.image.tag }}
+      - image: {{ .Values.image.name }}:{{ .Values.image.tag }}
+        name: flask
         livenessProbe:
           httpGet:
             path: /health/live
@@ -32,11 +38,11 @@ spec:
             valueFrom:
               secretKeyRef:
                 name: {{ template "app.name" . }}-redis
-                key: redis-password 
+                key: redis-password
         resources:
           requests:
-            memory: {{ .Values.resources.requests.memory }}
-            cpu: {{ .Values.resources.requests.cpu }}
+            memory:  {{ .Values.resources.requests.memory }}
+            cpu:  {{ .Values.resources.requests.cpu }}
           limits:
-            memory: {{ .Values.resources.limits.memory }}
-            cpu: {{ .Values.resources.limits.cpu }}
+            memory:  {{ .Values.resources.limits.memory }}
+            cpu:  {{ .Values.resources.limits.cpu }}

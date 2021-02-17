@@ -6,6 +6,3 @@
 .idea/
 *.tmproj
 .vscode/
-charts
-host.yaml
-Chart.lock

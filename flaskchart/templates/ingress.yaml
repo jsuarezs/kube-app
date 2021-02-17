@@ -11,6 +11,6 @@ spec:
     http:
       paths:
       - backend:
-          serviceName: {{ template "app.name" . }}-flask 
+          serviceName: {{ template "app.name" . }}-flask
           servicePort: 5000
 {{- end }}
