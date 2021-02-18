@@ -39,7 +39,7 @@ grafana
 
 grafana.keepcoding.35-203-139-35.nip.io
 
-![ ](https://storage.cloud.google.com/kube-images/Captura%20de%20pantalla%202021-02-16%20a%20las%2023.49.05.png)
+![Grafana](https://storage.cloud.google.com/kube-images/Captura%20de%20pantalla%202021-02-16%20a%20las%2023.49.05.png)
 
 --
 
