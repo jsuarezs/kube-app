@@ -8,7 +8,7 @@ Deploying simple flask counter using Redis as database.
 
 Web flask application will receive traffic and stores/retrieves data in/from Redis.
 
-![ ](https://storage.cloud.google.com/kube-images/Captura%20de%20pantalla%202021-02-17%20a%20las%2022.44.28.png)
+![ ](app.png)
 
 
 
