@@ -8,9 +8,9 @@ Deploying simple flask counter using Redis as database.
 
 Web flask application will receive traffic and stores/retrieves data in/from Redis.
 
-![app](ImagesRepo/app.png)
+![app](https://github.com/jsuarezs/kube-app/blob/main/images/app.png)
 
-<img src = “images/app.png” >
+<img src = “https://github.com/jsuarezs/kube-app/blob/main/images/app.png” >
 
 
 
