@@ -10,6 +10,8 @@ Web flask application will receive traffic and stores/retrieves data in/from Red
 
 ![app](ImagesRepo/app.png)
 
+<img src = “images/app.png” >
+
 
 
 
