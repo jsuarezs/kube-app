@@ -60,15 +60,14 @@ To deploy monitoring tools in this case Prometheus engine is getting useful data
 
 --
 
-### Networking traffic monitoring using Istio
+### Monitor Networking traffic using Istio
 
 To deploy Istio it's possible to use the Beta approach by GKE, editing the GKE cluser and enable Istio in Google Cloud Console.
 
 * Download Istio runnig ````curl -L https://istio.io/downloadIstio | sh -````.
 * Enter in Istio directory running ````cd istio-1.9.0````.
 * Run ````kubectl apply -f samples/addons/kiali.yaml```` to install Kiali dashboard.
-Enter in Kiali dashboard running ````istioctl dashboard kiali````.
+* Enter in Kiali dashboard running ````istioctl dashboard kiali````.
 
-instalar jaeger
 
 <img src = https://github.com/jsuarezs/kube-app/blob/main/images/istio.png weidth = 100 height = 400>
