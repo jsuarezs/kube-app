@@ -1,10 +1,6 @@
 # kube-app
 Author: Javier Suárez (Mentoring from @pmoncadaisla)
 
-GCP project ID: containers-project-304717
-
-email: javisugcp@gmail.com
-
 --
 ## kube-app description
 
