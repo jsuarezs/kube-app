@@ -5,6 +5,7 @@ metadata:
   labels:
     app: redis
 spec:
+  storageClassName: ontap-nfs
   accessModes:
     - ReadWriteOnce
   resources:
